@@ -1,7 +1,8 @@
-baseURL = "https://updev.si/"
+baseURL = "https://updev.si"
 title = "UpDev - Modern DataScience and Web Solutions"
 theme = "hugo-coder"
 
+publishDir = "docs"
 defaultContentLanguage = "en"
 paginate = 20
 pygmentsStyle = "bw"
