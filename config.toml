@@ -1,4 +1,4 @@
-baseURL = "https://updev.si"
+baseURL = "https://ptrus.github.io"                    #"https://updev.si"
 title = "UpDev - Modern DataScience and Web Solutions"
 theme = "hugo-coder"
 
