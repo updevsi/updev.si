@@ -1,0 +1,105 @@
+baseURL = "https://updev.si"
+title = "UpDev - Modern DataScience and Web Solutions"
+theme = "hugo-coder"
+
+defaultContentLanguage = "en"
+paginate = 20
+pygmentsStyle = "bw"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+enableEmoji = true
+
+
+[params]
+author = "UpDev.si"
+info = "Modern DataScience and Web Solutions"
+description = "UpDev.si website"
+keywords = "developer,personal"
+avatarurl = "images/logos/logo3.png"
+logoURL = "images/logos/logo3_small.png"
+#gravatar = "john.doe@example.com"
+
+favicon_32 = "/images/favicon-32x32.png"
+favicon_16 = "/images/favicon-16x16.png"
+touchicon = "/images/apple-touch-icon.png"
+
+since = 2022
+
+enableTwemoji = true
+
+colorScheme = "light"
+hidecolorschemetoggle = true
+
+#customCSS = ["css/custom.css"]
+#customSCSS = ["scss/custom.scss"]
+#customJS = ["js/custom.js"]
+
+[params.csp]
+childsrc = ["'self'"]
+fontsrc = [
+	"'self'",
+	"https://fonts.gstatic.com",
+	"https://cdn.jsdelivr.net/",
+	"https://fonts.cdnfonts.com/css/proxima-nova-2",
+]
+formaction = ["'self'"]
+framesrc = ["'self'"]
+imgsrc = ["'self'"]
+objectsrc = ["'none'"]
+stylesrc = [
+	"'self'",
+	"'unsafe-inline'",
+	"https://fonts.googleapis.com/",
+	"https://cdn.jsdelivr.net/",
+	"https://fonts.cdnfonts.com/css/proxima-nova-2",
+]
+scriptsrc = ["'self'", "'unsafe-inline'"]
+prefetchsrc = ["'self'"]
+# connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
+connectsrc = ["'self'"]
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
+
+# Social links
+[[params.social]]
+name = "GitHub"
+icon = "fa fa-github fa-2x"
+weight = 1
+url = "https://github.com/ptrus/"
+target = "_blank"
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-linkedin fa-2x"
+weight = 2
+url = "https://www.linkedin.com/in/peter.us"
+target = "_blank"
+[[params.social]]
+name = "Email"
+icon = "fa fa-envelope fa-2x"
+weight = 3
+url = "mailto:peter@updev.si"
+[[params.social]]
+name = "OpenPGP"
+icon = "fa fa-key fa-2x"
+weight = 4
+url = "https://keys.openpgp.org/vks/v1/by-fingerprint/69F95042868C3CB0DCA558558BCCEE2C3A33191C"
+
+# Menu links
+[languages.en]
+languageName = ":uk:"
+# [[languages.en.menu.main]]
+# name = "Projects"
+# weight = 1
+# url = "projects/"
+
+[languages.si]
+languageName = ":slovenia:"
+info = "Sodobne spletne rešitve"
+# [[languages.si.menu.main]]
+# name = "Projekti"
+# weight = 1
+# url = "projects/"

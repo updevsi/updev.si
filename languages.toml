@@ -1,0 +1,8 @@
+[en]
+title = "Clarity"
+LanguageName = "English"
+weight = 1
+
+[si]
+LanguageName = "Slovenščina"
+weight = 2
