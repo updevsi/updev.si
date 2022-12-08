@@ -1,5 +1,5 @@
 baseURL = "https://updev.si"
-title = "UpDev - Modern DataScience and Web Solutions"
+title = "UpDev - Modern Data and Web Solutions"
 theme = "hugo-coder"
 
 publishDir = "docs"
@@ -13,7 +13,7 @@ enableEmoji = true
 
 [params]
 author = "UpDev.si"
-info = "Modern DataScience and Web Solutions"
+info = "Modern Data and Web Solutions"
 description = "UpDev.si website"
 keywords = "developer,personal"
 avatarurl = "images/logos/logo3.png"
