@@ -1,0 +1,59 @@
+
+[categories]
+one = "kategorija"
+other = "kategorije"
+
+[tags]
+one = "značka"
+other = "značke"
+
+[series]
+one = "serija"
+other = "serije"
+
+[authors]
+one = "avtor"
+other = "avtorji"
+
+[posts]
+other = "posti"
+
+[reading_time]
+one = "Eno minutno branje"
+other = "{{ .Count }}-minutno branje"
+
+[page_not_found]
+other = "Stran ni najdena"
+
+[page_does_not_exist]
+other = "Stran ne obstaja."
+
+[head_back]
+other = "Nayaj na prvo stran <a href=\"{{ . }}\">homepage</a>."
+
+[powered_by]
+other = "Powered by"
+
+[see_also]
+other = "See also in"
+
+[note]
+other = "note"
+
+[tip]
+other = "tip"
+
+[example]
+other = "primer"
+
+[question]
+other = "question"
+
+[info]
+other = "info"
+
+[warning]
+other = "warning"
+
+[error]
+other = "error"
