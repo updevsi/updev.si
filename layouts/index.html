@@ -1,0 +1,16 @@
+{{ define "content" }}
+<section class="hero">
+  <h1 class="wordmark" aria-label="updev.si">{{ partial "wordmark.html" . }}</h1>
+  <p class="tagline">{{ site.Params.info }}</p>
+  {{- with site.Params.email }}
+  <a class="cta" href="mailto:{{ . }}">{{ . }} <span class="arrow" aria-hidden="true">→</span></a>
+  {{- end }}
+  {{- with site.Params.social }}
+  <ul class="links">
+    {{- range sort . "weight" }}
+    <li><a href="{{ .url | safeURL }}"{{ with .target }} target="{{ . }}" rel="noopener"{{ end }}>{{ .name }}{{ if .target }}<span class="ext" aria-hidden="true">↗</span>{{ end }}</a></li>
+    {{- end }}
+  </ul>
+  {{- end }}
+</section>
+{{ end }}

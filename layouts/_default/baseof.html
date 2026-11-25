@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0c0c0e" media="(prefers-color-scheme: dark)">
+    {{- if not hugo.IsServer }}
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; manifest-src 'self'; base-uri 'self'; form-action 'none'">
+    {{- end }}
+
+    <title>{{ block "title" . }}{{ site.Title }}{{ end }}</title>
+    {{ with site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta name="description" content="{{ .Description | default site.Params.description }}">
+
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+
+    {{ with .Permalink }}<link rel="canonical" href="{{ . }}">{{ end }}
+
+    <link rel="preload" href="/fonts/ProximaNova-Light.woff2" as="font" type="font/woff2" crossorigin>
+    {{ $css := resources.Get "css/main.css" }}
+    {{- if hugo.IsServer }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+    {{- else }}
+    {{- $css = $css | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+    <link rel="icon" type="image/png" href="{{ site.Params.favicon_32 | relURL }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ site.Params.favicon_16 | relURL }}" sizes="16x16">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.Params.touchicon | relURL }}">
+  </head>
+
+  <body>
+    <main>
+      {{ block "content" . }}{{ end }}
+    </main>
+
+    <footer class="bottom">
+      <span>© {{ with site.Params.since }}{{ if lt . now.Year }}{{ . }}–{{ end }}{{ end }}{{ now.Year }} {{ site.Params.author }}</span>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{{ define "title" }}404 · {{ site.Title }}{{ end }}
+{{ define "content" }}
+<section class="hero">
+  <p class="code">404</p>
+  <p class="tagline">{{ site.Params.notFound }}</p>
+  <ul class="links">
+    <li><a href="{{ site.Home.RelPermalink }}">{{ site.Params.backHome }}</a></li>
+  </ul>
+</section>
+{{ end }}
